@@ -14,15 +14,14 @@
 
         <ImageView
             android:id="@+id/view_image"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="250dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:transitionName="image"/>
+            app:srcCompat="@drawable/imagedefault"
+            android:transitionName="image"
+            android:scaleType="centerCrop"/>
 
         <TextView
             android:id="@+id/view_title"
@@ -30,15 +29,16 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="Title"
+            android:textAlignment="center"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:textSize="24sp"
-            android:textAlignment="center"
+            android:transitionName="title"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/view_image"
-            android:transitionName="title"/>
+            app:layout_constraintTop_toBottomOf="@+id/view_image" />
 
         <TextView
             android:id="@+id/view_desc"

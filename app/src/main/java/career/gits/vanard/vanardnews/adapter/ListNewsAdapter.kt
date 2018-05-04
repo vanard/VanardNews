@@ -41,7 +41,7 @@ class ListNewsAdapter(val newsList:MutableList<Article>, private val context: Co
                 i.putExtra("webUrl", newsList[position].url)
                 i.putExtra("title", newsList[position].title)
                 i.putExtra("desc", newsList[position].description)
-                i.putExtra("image", newsList[position].description)
+                i.putExtra("image", newsList[position].urlToImage)
                 context.startActivity(i)
             }
 
